@@ -1,7 +1,10 @@
 [package]
 name = "spral"
 version = "0.1.0"
+description = "Rust wrapper for SPRAL"
+license = "BSD-3-Clause"
+repository = "https://github.com/rwl/spral"
 edition = "2021"
 
 [dependencies]
-spral-sys = { path = "../spral-sys" }
+spral-sys = "0.1.0"

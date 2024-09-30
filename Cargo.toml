@@ -1,0 +1,7 @@
+[package]
+name = "spral"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+spral-sys = { path = "../spral-sys" }

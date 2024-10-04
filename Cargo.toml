@@ -7,4 +7,9 @@ repository = "https://github.com/rwl/spral"
 edition = "2021"
 
 [dependencies]
-spral-sys = "0.1.0"
+#spral-sys = "0.1.0"
+spral-sys = { path = "../spral-sys", features = ["shared_libraries"] }
+
+#[features]
+#shared_libraries = ["spral-sys/shared_libraries"]
+#static_libraries = ["spral-sys/static_libraries"]

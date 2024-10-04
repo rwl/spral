@@ -1,3 +1,4 @@
+use std::iter::zip;
 use std::os::raw::c_int;
 use std::ptr::null_mut;
 
@@ -34,6 +35,12 @@ pub fn random_matrix_generate(
             },
             flags as c_int,
         );
+    }
+    for (ptr, ptr_c) in zip(ptr, ptr_c) {
+        *ptr = ptr_c as usize;
+    }
+    for (row, row_c) in zip(row, row_c) {
+        *row = row_c as usize;
     }
     *state = state_c as u32;
 }
